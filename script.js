@@ -4,7 +4,7 @@ const modelParams = {
     imageScaleFactor: 0.7,  // reduce input image size for gains in speed.
     maxNumBoxes: 20,        // maximum number of boxes to detect
     iouThreshold: 0.5,      // ioU threshold for non-max suppression
-    scoreThreshold: 0.90,    // confidence threshold for predictions.
+    scoreThreshold: 0.79,    // confidence threshold for predictions.
   }
 
 //This is for differentiating between browsers
@@ -19,6 +19,9 @@ const audio = document.querySelector('#audio');
 const canvas = document.querySelector('#canvas');
 const context = canvas.getContext('2d');
 let model;
+
+//hand counter
+const number = document.querySelector('.counter');
 
 //Opens up the webcam
 handTrack.startVideo(video).then(status => {
@@ -36,9 +39,10 @@ handTrack.startVideo(video).then(status => {
 function runDetection(){
     model.detect(video).then(predictions => {
         console.log(predictions);
-        model.renderPredictions(predictions, canvas, context, video);
+        //model.renderPredictions(predictions, canvas, context, video);
         if(predictions.length > 0){
             audio.play();
+
         }
     });
 }
@@ -46,3 +50,4 @@ function runDetection(){
 handTrack.load(modelParams).then(lmodel => {
     model = lmodel;
 });
+

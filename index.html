@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel = "stylesheet" href = "style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <title>Hand Tracker</title>
 </head>
 <body>
+    <div class="container">
+        <h1 class = "title">Hand Tracker</h1>
+        <div class="box"><img src="imgs/White-Box.jpg" alt="box"></div>
+        <div class="counter"></div>
+    </div>
+
     <audio src="sound/iphone-ring.mp3" id = "audio"></audio>
-    <video id = "video"></video>
+    <div class="video">
+    <video id = "video"></video>    
+    </div>
     <canvas id = "canvas"></canvas>
-    
     <script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js"> </script>
     <script src = "script.js"></script>
+
 </body>
 </html>

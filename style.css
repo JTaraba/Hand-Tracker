@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #3d5173;
+    overflow: hidden;
+}
+.video{
+    position: absolute;
+    left: 28%;
+    top: 20%;   
+}
+.title{
+    text-align: center;
+    position: absolute;
+    left: 40%;
+    top: 10%;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+.box{
+    position: absolute;
+    left: 27.5%;
+    top: 19.5%;
+}
+
+.box img{
+    width: 650px;
+    height: 485px;
+}
