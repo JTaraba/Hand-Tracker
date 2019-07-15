@@ -4,7 +4,7 @@ const modelParams = {
     imageScaleFactor: 0.7,  // reduce input image size for gains in speed.
     maxNumBoxes: 20,        // maximum number of boxes to detect
     iouThreshold: 0.5,      // ioU threshold for non-max suppression
-    scoreThreshold: 0.79,    // confidence threshold for predictions.
+    scoreThreshold: 0.90,    // confidence threshold for predictions.
   }
 
 //This is for differentiating between browsers
