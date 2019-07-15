@@ -11,11 +11,12 @@ const canvas = document.querySelector('#canvas');
 const canvas = canvas.getContext('2d');
 let model;
 
+//Opens up the webcam
 handTrack.startVideo(video)
     .then(status => {
         if (status) {
             navigator.getUserMedia({video:{}}, stream=> {
-
+                video.scrObject = stream;
             },
             err => console.log(err));
         }
