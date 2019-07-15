@@ -4,7 +4,7 @@ const modelParams = {
     imageScaleFactor: 0.7,  // reduce input image size for gains in speed.
     maxNumBoxes: 20,        // maximum number of boxes to detect
     iouThreshold: 0.5,      // ioU threshold for non-max suppression
-    scoreThreshold: 0.8,    // confidence threshold for predictions.
+    scoreThreshold: 0.79,    // confidence threshold for predictions.
   }
 
 //This is for differentiating between browsers
@@ -37,6 +37,9 @@ function runDetection(){
     model.detect(video).then(predictions => {
         console.log(predictions);
         model.renderPredictions(predictions, canvas, context, video);
+        if(predictions.length > 0){
+            audio.play();
+        }
     });
 }
 
